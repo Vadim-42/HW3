@@ -1,12 +1,10 @@
-package main;
-
 import animals.Animal;
 import data.AnimalFactory;
 import db.MySQLConnector;
 import tables.AnimalTable;
-import main.tools.AnimalCreator;
-import main.tools.InputIntValidator;
-import main.tools.InputStringValidator;
+import tools.AnimalCreator;
+import tools.InputIntValidator;
+import tools.InputStringValidator;
 import menu.Command;
 import java.sql.SQLException;
 import java.util.ArrayList;

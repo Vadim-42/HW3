@@ -1,14 +1,16 @@
-package main.tools;
+package tools;
+
+import animals.AnimalType;
 
 import java.util.Scanner;
 
 
 public class AnimalCreator {
     private Scanner scanner;
-    private  main.tools.InputIntValidator intValidator;
-    private  main.tools.InputStringValidator strValidator;
+    private InputIntValidator intValidator;
+    private InputStringValidator strValidator;
 
-    public AnimalCreator(Scanner scanner,  main.tools.InputIntValidator intValidator,  main.tools.InputStringValidator strValidator) {
+    public AnimalCreator(Scanner scanner, InputIntValidator intValidator, InputStringValidator strValidator) {
         this.scanner = scanner;
         this.intValidator = intValidator;
         this.strValidator = strValidator;
@@ -53,6 +55,6 @@ public class AnimalCreator {
             }
         } while (!inputStringValidator(color));
 
-        return data.AnimalFactory.createAnimal(type, name, age, weight, color);
+        return data.AnimalFactory.createAnimal(AnimalType.valueOf(type), name, age, weight, color);
     }
 }
